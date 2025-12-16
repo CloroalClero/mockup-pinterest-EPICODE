@@ -1,0 +1,124 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eee;
+  font-family: Arial, sans-serif;
+}
+
+.scheda{
+  position: relative;
+  width: 320px;
+  height: 520px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.scheda-immagine{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scheda::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(0,0,0,0.45), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+.salva{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 2;
+  border: 0;
+  cursor: pointer;
+  background: #e60023;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 22px;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.salva:hover{
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+.barra-bassa{
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link-basso{
+  flex: 1;
+  background: rgba(255,255,255,0.95);
+  color: #111;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.link-basso:hover{
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.tondo{
+  width: 52px;
+  height: 52px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  font-size: 22px;
+  font-weight: 900;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.tondo:hover{
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.icona{
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.testo-link{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.freccia{
+  font-size: 18px;
+}
